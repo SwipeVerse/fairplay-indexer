@@ -1,0 +1,8 @@
+{
+  "goerli": {
+    "fairplay": {
+      "address": "0x96530FA1bc1A5DBCfFad04A96AE30f2248e02427",
+      "startBlock": 0
+    }
+  }
+}

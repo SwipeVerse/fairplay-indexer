@@ -1,0 +1,12 @@
+type AddUser @entity(immutable: true) {
+  id: Bytes!
+  player_addr: Bytes! # address
+  name: String! # string
+  dob: BigInt! # uint256
+  gender: Int! # uint8
+  location: BigInt! # uint256
+  uri: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
