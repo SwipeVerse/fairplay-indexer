@@ -4,7 +4,7 @@ schema:
 dataSources:
   - kind: ethereum
     name: fairplay
-    network: goerli
+    network: localhost #mainnet #goerli
     source:
       address: "0x96530FA1bc1A5DBCfFad04A96AE30f2248e02427"
       abi: fairplay
@@ -14,11 +14,15 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - AddUser
+        - Directories
       abis:
         - name: fairplay
           file: ./abis/fairplay.json
+        - name: NFTprofile
+          file: ./abis/NFTprofile.json
       eventHandlers:
+        - event: AddUser(indexed address,string,uint256,uint8,uint256,string)
+          handler: handleAddUser
         - event: AddUser(indexed address,string,uint256,uint8,uint256,string)
           handler: handleAddUser
       file: ./src/fairplay.ts

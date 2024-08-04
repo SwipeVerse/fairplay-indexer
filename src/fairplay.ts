@@ -17,5 +17,6 @@ export function handleAddUser(event: AddUserEvent): void {
   entity.transactionHash = event.transaction.hash
 
   entity.save()
+  // Exchange.create(event.params.exchange)
 }
 // test push
