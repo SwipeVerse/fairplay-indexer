@@ -10,3 +10,13 @@ type AddUser @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+
+type ProfileMinted @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  ipfsURI: String! # string
+  publicKey: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
